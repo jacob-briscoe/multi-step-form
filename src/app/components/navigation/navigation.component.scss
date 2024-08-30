@@ -1,0 +1,11 @@
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 17px;
+}
+
+.nav:has(.button_basic) {
+  padding-left: 17px;
+  justify-content: space-between;
+}

@@ -1,0 +1,16 @@
+<header class="main-section__header">
+  <app-main-header>Pick add-ons</app-main-header>
+</header>
+<section class="main-section">
+  <app-main-instructions>
+    Add-ons help enhance your gaming experience.
+  </app-main-instructions>
+  <form appForm [formGroup]="form" (ngSubmit)="onSubmit()">
+    <app-form-field [control]="form.controls.addons" [hasValidation]="false">
+      <app-addons-selector
+        [form]="form"
+        [allAddons]="allAddons()"
+      ></app-addons-selector>
+    </app-form-field>
+  </form>
+</section>

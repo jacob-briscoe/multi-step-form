@@ -1,0 +1,18 @@
+:host(.ng-invalid.ng-touched) .form__input {
+  border-color: var(--strawberry-red);
+}
+
+.form__input {
+  padding: 0.5rem 1rem;
+  border-color: var(--light-gray);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  width: 100%;
+
+  &:hover {
+    border-color: var(--purplish-blue);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,39 @@
+<ul class="selection__list">
+  @for (plan of allPlans(); track plan.id) {
+    <li class="selection__list__item">
+      <label class="selection__list__option">
+        <input
+          #radio
+          type="radio"
+          [name]="formControlName()"
+          [value]="plan.id"
+          [attr.disabled]="disabled() || null"
+          [checked]="plan.id === value()?.id"
+          (blur)="onBlur()"
+          (change)="onRadioChange(radio.value)"
+        />
+        <div class="selection__list__option-content">
+          <img
+            [src]="plan.icon.src"
+            [alt]="plan.icon.alt"
+            [width]="plan.icon.width"
+            [height]="plan.icon.height"
+          />
+          <div class="selection__list__option-details">
+            <p class="selection__list__option-title">{{ plan.title }}</p>
+            <p class="selection__list__option-price">
+              {{ plan.price.amount | price }}/{{
+                selectedBillingFrequency() | billingFrequencyDetail
+              }}
+            </p>
+            @if (plan.price.promo) {
+              <p class="selection__list__option-promo">
+                {{ plan.price.promo }}
+              </p>
+            }
+          </div>
+        </div>
+      </label>
+    </li>
+  }
+</ul>

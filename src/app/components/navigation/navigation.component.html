@@ -1,0 +1,16 @@
+<nav class="nav">
+  @if (stepperService.hasPreviousStep()) {
+    <button type="button" [appButton] (click)="stepperService.previousStep()">
+      Go Back
+    </button>
+  }
+  @if (stepperService.isSecondToLastStep()) {
+    <button type="button" appButton="filled" (click)="handleConfirmSignup()">
+      {{ nextStepButtonText() }}
+    </button>
+  } @else if (stepperService.hasNextStep()) {
+    <button [attr.form]="stepFormId" type="submit" appButton="filled">
+      {{ nextStepButtonText() }}
+    </button>
+  }
+</nav>

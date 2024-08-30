@@ -1,0 +1,11 @@
+.form__field-billing-frequency {
+  background-color: var(--magnolia);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .main-section__form-billing-frequency {
+    gap: 2rem !important;
+  }
+}

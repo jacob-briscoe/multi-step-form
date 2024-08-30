@@ -1,0 +1,20 @@
+.form__field {
+  &__label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      min-height: 1.3rem;
+
+      .error__message {
+        color: var(--strawberry-red);
+        font-weight: 700;
+        font-size: small;
+      }
+    }
+  }
+}

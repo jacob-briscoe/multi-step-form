@@ -1,0 +1,53 @@
+<header class="main-section__header">
+  <app-main-header>Finishing up</app-main-header>
+</header>
+<section class="main-section">
+  <app-main-instructions>
+    Double-check everything looks OK before confirming.
+  </app-main-instructions>
+  <div class="order-summary">
+    <div class="order-summary__frequency">
+      <div>
+        <h3 class="order-summary__frequency__title">
+          {{ vm().plan.title }} ({{
+            vm().billingFrequency | billingFrequencyDetail: "title"
+          }})
+        </h3>
+        <a
+          class="order-summary__frequency__change cursor-pointer underline"
+          (click)="onChangePlan()"
+          >Change</a
+        >
+      </div>
+      <span class="order-summary__frequency-price"
+        >{{ vm().plan.price.amount | price }}/{{
+          vm().billingFrequency | billingFrequencyDetail
+        }}</span
+      >
+    </div>
+    <hr class="order-summary-divider" />
+    @for (addon of vm().addons; track addon.id) {
+      <div class="order-summary__item">
+        <div>
+          <h3 class="order-summary__item__title">{{ addon.title }}</h3>
+        </div>
+        <span class="order-summary__item__price"
+          >+{{ addon.price.amount | price }}/{{
+            addon.price.billingFrequency | billingFrequencyDetail
+          }}</span
+        >
+      </div>
+    }
+  </div>
+  <div class="order-summary__item__total">
+    <h3 class="order-summary__item__title">
+      Total (per
+      {{ vm().billingFrequency | billingFrequencyDetail: "singularTitle" }})
+    </h3>
+    <span class="order-summary__item__price"
+      >+{{ vm().total | price }}/{{
+        vm().billingFrequency | billingFrequencyDetail
+      }}</span
+    >
+  </div>
+</section>

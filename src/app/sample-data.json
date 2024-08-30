@@ -1,0 +1,114 @@
+{
+  "plans": [
+    {
+      "id": 1,
+      "title": "Arcade",
+      "icon": {
+        "alt": "arcade",
+        "height": "40",
+        "width": "40",
+        "src": "/assets/images/icon-arcade.svg"
+      },
+      "prices": [
+        {
+          "amount": 9,
+          "billingFrequency": 1
+        },
+        {
+          "amount": 90,
+          "billingFrequency": 2,
+          "promo": "2 months free"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Advanced",
+      "icon": {
+        "alt": "advanced",
+        "height": "40",
+        "width": "40",
+        "src": "/assets/images/icon-advanced.svg"
+      },
+      "prices": [
+        {
+          "amount": 12,
+          "billingFrequency": 1
+        },
+        {
+          "amount": 120,
+          "billingFrequency": 2,
+          "promo": "2 months free"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Pro",
+      "icon": {
+        "alt": "pro",
+        "height": "40",
+        "width": "40",
+        "src": "/assets/images/icon-pro.svg"
+      },
+      "prices": [
+        {
+          "amount": 15,
+          "billingFrequency": 1
+        },
+        {
+          "amount": 150,
+          "billingFrequency": 2,
+          "promo": "2 months free"
+        }
+      ]
+    }
+  ],
+  "addons": [
+    {
+      "id": 1,
+      "title": "Online service",
+      "description": "Access to multiplayer games",
+      "prices": [
+        {
+          "amount": 1,
+          "billingFrequency": 1
+        },
+        {
+          "amount": 10,
+          "billingFrequency": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Larger storage",
+      "description": "Extra 1TB of cloud save",
+      "prices": [
+        {
+          "amount": 2,
+          "billingFrequency": 1
+        },
+        {
+          "amount": 20,
+          "billingFrequency": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Customizable profile",
+      "description": "Custom theme on your profile",
+      "prices": [
+        {
+          "amount": 2,
+          "billingFrequency": 1
+        },
+        {
+          "amount": 20,
+          "billingFrequency": 2
+        }
+      ]
+    }
+  ]
+}

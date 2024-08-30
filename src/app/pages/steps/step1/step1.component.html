@@ -1,0 +1,35 @@
+<header class="main-section__header">
+  <app-main-header>Personal info</app-main-header>
+</header>
+<section class="main-section">
+  <app-main-instructions>
+    Please provide your name, email address, and phone number.
+  </app-main-instructions>
+  <form appForm [formGroup]="form" (ngSubmit)="onSubmit()">
+    <app-form-field [control]="form.controls.name" label="Name">
+      <app-input
+        type="text"
+        formControlName="name"
+        placeholder="e.g. Stephen King"
+      />
+    </app-form-field>
+    <app-form-field [control]="form.controls.email" label="Email Address">
+      <app-input
+        type="email"
+        formControlName="email"
+        placeholder="e.g. stephenking@lorem.com"
+      />
+    </app-form-field>
+    <app-form-field
+      [control]="form.controls.phone"
+      label="Phone Number"
+      [patternError]="phonePatternError"
+    >
+      <app-input
+        type="tel"
+        formControlName="phone"
+        placeholder="e.g. +1 234 567 890"
+      />
+    </app-form-field>
+  </form>
+</section>

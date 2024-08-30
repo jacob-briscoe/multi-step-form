@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="screen">
+    <header class="screen__nav">
+      <app-stepper />
+    </header>
+    <main class="screen__main">
+      <router-outlet />
+    </main>
+    <footer class="screen__footer">
+      <app-navigation class="navigation" (confirmSignup)="onConfirmSignup()" />
+    </footer>
+  </div>
+</div>

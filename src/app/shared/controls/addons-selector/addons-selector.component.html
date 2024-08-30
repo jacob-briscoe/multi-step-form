@@ -1,0 +1,31 @@
+<ng-container [formGroup]="form()">
+  <ul class="selection-list" formArrayName="addons">
+    @for (addon of allAddons(); let i = $index; track i) {
+      <li class="selection-list__item">
+        <label class="selection-list__option">
+          <input
+            type="checkbox"
+            [formControlName]="i"
+            [attr.disabled]="disabled() ? true : null"
+            class="form__input-checkbox"
+          />
+          <div class="selection-list__option-content">
+            <div class="selection-list__option-content-details">
+              <p class="selection-list__option-content-details-title">
+                {{ addon.title }}
+              </p>
+              <p class="selection-list__option-content-details-description">
+                {{ addon.description }}
+              </p>
+            </div>
+            <div class="selection-list__option-content-price">
+              +{{ addon.price.amount | price }}/{{
+                addon.price.billingFrequency | billingFrequencyDetail
+              }}
+            </div>
+          </div>
+        </label>
+      </li>
+    }
+  </ul>
+</ng-container>

@@ -1,0 +1,54 @@
+<div class="form__field">
+  <label class="form__field__label">
+    <div class="form__field__label-container" [class.hidden]="!hasValidation()">
+      <span class="label__text" [class.invisible]="label() == null">{{
+        label()
+      }}</span>
+      @switch (error().key) {
+        @case ("min") {
+          <span class="error__message"
+            >Minimum {{ control().getError("min") }}</span
+          >
+        }
+        @case ("max") {
+          <span class="error__message"
+            >Maximum {{ control().getError("max") }}</span
+          >
+        }
+        @case ("email") {
+          <span class="error__message">Invalid email address</span>
+        }
+        @case ("required") {
+          <span class="error__message">This field is required</span>
+        }
+        @case ("requiredtrue") {
+          <span class="error__message">This field is required</span>
+        }
+        @case ("minlength") {
+          <span class="error__message"
+            >At least
+            {{ control().getError("minlength").requiredLength }}
+            characters</span
+          >
+        }
+        @case ("maxlength") {
+          <span class="error__message"
+            >No more than
+            {{ control().getError("maxlength").requiredLength }}
+            characters</span
+          >
+        }
+        @case ("pattern") {
+          <span class="error__message">
+            @if (patternError() != null) {
+              {{ patternError() }}
+            } @else {
+              Pattern does not match
+            }
+          </span>
+        }
+      }
+    </div>
+    <ng-content />
+  </label>
+</div>

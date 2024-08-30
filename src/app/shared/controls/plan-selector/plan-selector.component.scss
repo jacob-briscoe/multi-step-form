@@ -1,0 +1,85 @@
+:host(.ng-invalid.ng-touched) .selection__list {
+  border: 1px solid var(--strawberry-red);
+  border-radius: 12px;
+}
+
+.selection__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+
+  &__option {
+    border: 1px solid var(--light-gray);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    height: 75px;
+    padding-left: 17px;
+
+    .selection__list__option-content {
+      display: flex;
+      gap: 1rem;
+
+      .selection__list__option-details {
+        display: flex;
+        flex-direction: column;
+
+        .selection__list__option-title {
+          color: var(--marine-blue);
+          font-size: large;
+          font-weight: 500;
+        }
+
+        .selection__list__option-price {
+          color: var(--cool-gray);
+          font-size: small;
+        }
+
+        .selection__list__option-promo {
+          display: none;
+          color: var(--marine-blue);
+          font-size: small;
+        }
+      }
+    }
+
+    &:hover {
+      border: 1px solid var(--purplish-blue);
+      cursor: pointer;
+    }
+
+    & input {
+      display: none;
+    }
+
+    &:has(input:checked) {
+      border: 1px solid var(--purplish-blue);
+      background-color: var(--magnolia);
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .selection__list {
+    flex-direction: row;
+    gap: 1.2rem;
+    height: 180px;
+
+    &__item {
+      flex: 1;
+
+      .selection__list__option {
+        padding: 1rem;
+        height: 100%;
+
+        .selection__list__option-content {
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

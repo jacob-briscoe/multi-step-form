@@ -1,0 +1,34 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-section__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-section__instructions-step-5 {
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: var(--cool-gray);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :host {
+    height: 80%;
+  }
+
+  .main-section__header {
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
