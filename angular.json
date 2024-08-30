@@ -57,6 +57,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/multi-step-form/",
               "budgets": [
                 {
                   "type": "initial",
@@ -95,7 +96,11 @@
           "builder": "@angular-devkit/build-angular:extract-i18n"
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://jacob-briscoe.github.io/multi-step-form/",
+            "repo": "https://github.com/jacob-briscoe/multi-step-form.git"
+          }
         }
       }
     }
