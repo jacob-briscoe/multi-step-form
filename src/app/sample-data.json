@@ -7,7 +7,7 @@
         "alt": "arcade",
         "height": "40",
         "width": "40",
-        "src": "assets/images/icon-arcade.svg"
+        "src": "../assets/images/icon-arcade.svg"
       },
       "prices": [
         {
@@ -28,7 +28,7 @@
         "alt": "advanced",
         "height": "40",
         "width": "40",
-        "src": "assets/images/icon-advanced.svg"
+        "src": "../assets/images/icon-advanced.svg"
       },
       "prices": [
         {
@@ -49,7 +49,7 @@
         "alt": "pro",
         "height": "40",
         "width": "40",
-        "src": "assets/images/icon-pro.svg"
+        "src": "../assets/images/icon-pro.svg"
       },
       "prices": [
         {
