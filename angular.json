@@ -98,7 +98,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://jacob-briscoe.github.io/multi-step-form/",
+            "baseHref": "/multi-step-form/",
             "repo": "https://github.com/jacob-briscoe/multi-step-form.git"
           }
         }
