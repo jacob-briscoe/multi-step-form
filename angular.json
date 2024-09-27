@@ -87,6 +87,7 @@
               "buildTarget": "multi-step-form:build:production"
             },
             "development": {
+              "host": "0.0.0.0",
               "buildTarget": "multi-step-form:build:development"
             }
           },
@@ -104,5 +105,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
