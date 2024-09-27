@@ -14,7 +14,6 @@
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "npm install",
 
-  // Configure tool-specific properties.
   "customizations": {
     "vscode": {
       "extensions": [
@@ -26,7 +25,15 @@
         "GitHub.copilot-chat",
         "GitHub.vscode-pull-request-github",
         "eamodio.gitlens"
-      ]
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/bin/zsh"
+          }
+        }
+      }
     }
   },
 
