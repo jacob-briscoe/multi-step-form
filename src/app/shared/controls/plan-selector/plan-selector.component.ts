@@ -13,19 +13,18 @@ import { BillingFrequencyDetailPipe } from "../../pipes/billing-frequency-detail
 import { PricePipe } from "../../pipes/price.pipe";
 
 @Component({
-  selector: "app-plan-selector",
-  standalone: true,
-  imports: [BillingFrequencyDetailPipe, PricePipe],
-  templateUrl: "./plan-selector.component.html",
-  styleUrl: "./plan-selector.component.scss",
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => PlanSelectorComponent),
-      multi: true,
-    },
-  ],
+    selector: "app-plan-selector",
+    imports: [BillingFrequencyDetailPipe, PricePipe],
+    templateUrl: "./plan-selector.component.html",
+    styleUrl: "./plan-selector.component.scss",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => PlanSelectorComponent),
+            multi: true,
+        },
+    ]
 })
 export class PlanSelectorComponent implements ControlValueAccessor {
   formControlName = input<string | number | null>(null);

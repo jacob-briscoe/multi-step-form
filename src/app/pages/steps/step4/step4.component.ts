@@ -16,20 +16,19 @@ import { BillingFrequencyDetailPipe } from "../../../shared/pipes/billing-freque
 import { PricePipe } from "../../../shared/pipes/price.pipe";
 
 @Component({
-  selector: "app-step4",
-  standalone: true,
-  imports: [
-    BillingFrequencyDetailPipe,
-    MainHeaderComponent,
-    MainInstructionsComponent,
-    PricePipe,
-    RouterLink,
-    FormDirective,
-    ReactiveFormsModule,
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: "./step4.component.html",
-  styleUrl: "./step4.component.scss",
+    selector: "app-step4",
+    imports: [
+        BillingFrequencyDetailPipe,
+        MainHeaderComponent,
+        MainInstructionsComponent,
+        PricePipe,
+        RouterLink,
+        FormDirective,
+        ReactiveFormsModule,
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./step4.component.html",
+    styleUrl: "./step4.component.scss"
 })
 export class Step4Component {
   stepperService = inject(StepperService);
