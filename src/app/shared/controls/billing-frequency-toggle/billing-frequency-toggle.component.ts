@@ -43,7 +43,7 @@ export class BillingFrequencyToggle extends CheckboxControlValueAccessor {
 
   isChecked = computed(() => this.value() === BillingFrequencyUnit.Yearly);
 
-  private propagateChange: any = (event: Event) => {};
+  private propagateChange: any = (_: Event) => {};
   private propagateTouched: any = () => {};
 
   override writeValue(value: BillingFrequencyUnit | undefined): void {
