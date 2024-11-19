@@ -16,18 +16,17 @@ import { Regex, RegexError } from "../../../shared/utils/regex";
 import type { Form } from "./models/form";
 
 @Component({
-  selector: "app-step1",
-  standalone: true,
-  imports: [
-    FormDirective,
-    FormFieldComponent,
-    InputComponent,
-    MainHeaderComponent,
-    MainInstructionsComponent,
-    ReactiveFormsModule,
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: "./step1.component.html",
+    selector: "app-step1",
+    imports: [
+        FormDirective,
+        FormFieldComponent,
+        InputComponent,
+        MainHeaderComponent,
+        MainInstructionsComponent,
+        ReactiveFormsModule,
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./step1.component.html"
 })
 export class Step1Component {
   signUpService = inject(SignupStoreService);

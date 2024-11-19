@@ -9,18 +9,17 @@ import {
 import { NG_VALUE_ACCESSOR, type ControlValueAccessor } from "@angular/forms";
 
 @Component({
-  selector: "app-input",
-  standalone: true,
-  imports: [],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => InputComponent),
-      multi: true,
-    },
-  ],
-  template: `
+    selector: "app-input",
+    imports: [],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => InputComponent),
+            multi: true,
+        },
+    ],
+    template: `
     <input
       #input
       [type]="type()"
@@ -32,7 +31,7 @@ import { NG_VALUE_ACCESSOR, type ControlValueAccessor } from "@angular/forms";
       (blur)="onBlur()"
     />
   `,
-  styleUrl: "./input.component.scss",
+    styleUrl: "./input.component.scss"
 })
 export class InputComponent implements ControlValueAccessor {
   type = input.required<"text" | "email" | "tel">();

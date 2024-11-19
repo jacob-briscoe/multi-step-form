@@ -40,8 +40,9 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular/build:application",
           "options": {
+            "baseHref": "/multi-step-form/",
             "outputPath": "dist/multi-step-form",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -81,20 +82,19 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
               "buildTarget": "multi-step-form:build:production"
             },
             "development": {
-              "host": "0.0.0.0",
               "buildTarget": "multi-step-form:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n"
+          "builder": "@angular/build:extract-i18n"
         }
       }
     }

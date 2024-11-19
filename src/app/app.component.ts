@@ -12,12 +12,11 @@ import { StepperComponent } from "./components/stepper/stepper.component";
 import { SignupStoreService } from "./services/signup-store.service";
 
 @Component({
-  selector: "app-root",
-  standalone: true,
-  imports: [RouterOutlet, StepperComponent, NavigationComponent],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: "./app.component.html",
-  styleUrl: "./app.component.scss",
+    selector: "app-root",
+    imports: [RouterOutlet, StepperComponent, NavigationComponent],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./app.component.html",
+    styleUrl: "./app.component.scss"
 })
 export class AppComponent {
   signUpService = inject(SignupStoreService);

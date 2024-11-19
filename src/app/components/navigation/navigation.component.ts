@@ -11,12 +11,11 @@ import { ButtonDirective } from "../../shared/directives/button.directive";
 import { STEP_FORM_ID } from "../../shared/utils/form";
 
 @Component({
-  selector: "app-navigation",
-  standalone: true,
-  imports: [ButtonDirective, ReactiveFormsModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: "./navigation.component.html",
-  styleUrl: "./navigation.component.scss",
+    selector: "app-navigation",
+    imports: [ButtonDirective, ReactiveFormsModule],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./navigation.component.html",
+    styleUrl: "./navigation.component.scss"
 })
 export class NavigationComponent {
   confirmSignup = output<void>();

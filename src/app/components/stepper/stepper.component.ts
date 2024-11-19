@@ -2,10 +2,9 @@ import { Component, inject } from "@angular/core";
 import { StepperService } from "../../services/stepper.service";
 
 @Component({
-  selector: "app-stepper",
-  standalone: true,
-  imports: [],
-  template: `
+    selector: "app-stepper",
+    imports: [],
+    template: `
     <nav class="nav">
       <ol class="steps">
         @for (step of stepperService.visibleSteps(); track step.num) {
@@ -23,7 +22,7 @@ import { StepperService } from "../../services/stepper.service";
       </ol>
     </nav>
   `,
-  styleUrl: "./stepper.component.scss",
+    styleUrl: "./stepper.component.scss"
 })
 export class StepperComponent {
   stepperService = inject(StepperService);

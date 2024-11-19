@@ -17,12 +17,11 @@ import {
 import { filter, tap } from "rxjs";
 
 @Component({
-  selector: "app-form-field",
-  standalone: true,
-  imports: [],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: "./form-field.component.html",
-  styleUrl: "./form-field.component.scss",
+    selector: "app-form-field",
+    imports: [],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./form-field.component.html",
+    styleUrl: "./form-field.component.scss"
 })
 export class FormFieldComponent implements OnInit {
   label = input<string | undefined>();

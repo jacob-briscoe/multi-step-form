@@ -12,10 +12,9 @@ import {
 import { BillingFrequencyUnit } from "../../../models/billing-frequency-unit.model";
 
 @Component({
-  selector: "app-billing-frequency-toggle",
-  standalone: true,
-  imports: [],
-  template: `
+    selector: "app-billing-frequency-toggle",
+    imports: [],
+    template: `
     <span class="label__text">Monthly</span>
     <div class="toggle-switch">
       <input
@@ -29,22 +28,22 @@ import { BillingFrequencyUnit } from "../../../models/billing-frequency-unit.mod
     </div>
     <span class="label__text">Yearly</span>
   `,
-  styleUrl: "./billing-frequency-toggle.component.scss",
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => BillingFrequencyToggle),
-      multi: true,
-    },
-  ],
+    styleUrl: "./billing-frequency-toggle.component.scss",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => BillingFrequencyToggle),
+            multi: true,
+        },
+    ]
 })
 export class BillingFrequencyToggle extends CheckboxControlValueAccessor {
   value = signal<BillingFrequencyUnit | undefined>(undefined);
 
   isChecked = computed(() => this.value() === BillingFrequencyUnit.Yearly);
 
-  private propagateChange: any = (event: Event) => {};
+  private propagateChange: any = (_: Event) => {};
   private propagateTouched: any = () => {};
 
   override writeValue(value: BillingFrequencyUnit | undefined): void {

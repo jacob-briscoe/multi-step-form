@@ -17,19 +17,18 @@ import { BillingFrequencyDetailPipe } from "../../pipes/billing-frequency-detail
 import { PricePipe } from "../../pipes/price.pipe";
 
 @Component({
-  selector: "app-addons-selector",
-  standalone: true,
-  imports: [BillingFrequencyDetailPipe, ReactiveFormsModule, PricePipe],
-  templateUrl: "./addons-selector.component.html",
-  styleUrl: "./addons-selector.component.scss",
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => AddonsSelectorComponent),
-      multi: true,
-    },
-  ],
+    selector: "app-addons-selector",
+    imports: [BillingFrequencyDetailPipe, ReactiveFormsModule, PricePipe],
+    templateUrl: "./addons-selector.component.html",
+    styleUrl: "./addons-selector.component.scss",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => AddonsSelectorComponent),
+            multi: true,
+        },
+    ]
 })
 export class AddonsSelectorComponent implements ControlValueAccessor {
   allAddons = input.required<Addons>();

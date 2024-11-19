@@ -14,18 +14,17 @@ import { FormDirective } from "../../../shared/directives/form.directive";
 import type { Form } from "./models/form";
 
 @Component({
-  selector: "app-step3",
-  standalone: true,
-  imports: [
-    FormDirective,
-    FormFieldComponent,
-    MainHeaderComponent,
-    MainInstructionsComponent,
-    ReactiveFormsModule,
-    AddonsSelectorComponent,
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: "./step3.component.html",
+    selector: "app-step3",
+    imports: [
+        FormDirective,
+        FormFieldComponent,
+        MainHeaderComponent,
+        MainInstructionsComponent,
+        ReactiveFormsModule,
+        AddonsSelectorComponent,
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./step3.component.html"
 })
 export class Step3Component {
   formBuilder = inject(FormBuilder);

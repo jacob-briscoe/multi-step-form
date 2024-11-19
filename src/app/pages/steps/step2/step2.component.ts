@@ -17,20 +17,19 @@ import { FormDirective } from "../../../shared/directives/form.directive";
 import type { Form } from "./models/form";
 
 @Component({
-  selector: "app-step2",
-  standalone: true,
-  imports: [
-    BillingFrequencyToggle,
-    FormDirective,
-    FormFieldComponent,
-    MainHeaderComponent,
-    MainInstructionsComponent,
-    PlanSelectorComponent,
-    ReactiveFormsModule,
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: "./step2.component.html",
-  styleUrls: ["./step2.component.scss"],
+    selector: "app-step2",
+    imports: [
+        BillingFrequencyToggle,
+        FormDirective,
+        FormFieldComponent,
+        MainHeaderComponent,
+        MainInstructionsComponent,
+        PlanSelectorComponent,
+        ReactiveFormsModule,
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./step2.component.html",
+    styleUrls: ["./step2.component.scss"]
 })
 export class Step2Component {
   formBuilder = inject(FormBuilder);
